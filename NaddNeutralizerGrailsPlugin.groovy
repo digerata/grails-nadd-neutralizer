@@ -24,7 +24,10 @@ This plugin helps spread the love.
 (What is N.A.D.D?
 	See: http://randsinrepose.com/archives/2003/07/10/nadd.html)
 
+Source is at: http://github.com/digerata/grails-nadd-neutralizer
 
+Contributions are welcome.  Currently, this plugin only supports
+Mac OS X.
 '''
 
     // URL to the plugin's documentation
