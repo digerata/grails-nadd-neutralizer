@@ -1,4 +1,5 @@
 N.A.D.D Neutralizer decreases developer "latency" during grails builds.
+
 All that fancy talk. Sheesh! This plugin will use text to speech to tell you when key events in your build are complete. So say you are like me with a project that takes several minutes to start after grails run-app. You can, guilt-free, go browse your favorite sites without worrying about getting caught up in something. When your app is up and running, this plugin announces on your speakers, "Application is running!"
 
 Of course, it handles all all key events, not just run-app. One caveat, this only works on OS X. Patches for other operating systems are welcome at: http://github.com/digerata/grails-nadd-neutralizer.
