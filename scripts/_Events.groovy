@@ -11,7 +11,6 @@ eventStatusFinal = { msg ->
 	
 	} else if(System.properties["os.name"] == "Linux" && System.env["SPEECH_ENGINE"] == "festival") {
 		String.metaClass.say = {
-			println "FUCK!"
 			def message = "echo \"${delegate}\"".execute()
 			def speechengine = "festival –tts".execute()
 			message | speechengine
