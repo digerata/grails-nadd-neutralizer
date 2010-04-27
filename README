@@ -2,8 +2,25 @@ N.A.D.D Neutralizer decreases developer "latency" during grails builds.
 
 All that fancy talk. Sheesh! This plugin will use text to speech to tell you when key events in your build are complete. So say you are like me with a project that takes several minutes to start after grails run-app. You can, guilt-free, go browse your favorite sites without worrying about getting caught up in something. When your app is up and running, this plugin announces on your speakers, "Application is running!"
 
-Of course, it handles all all key events, not just run-app. One caveat, this only works on OS X. Patches for other operating systems are welcome at: http://github.com/digerata/grails-nadd-neutralizer.
+Of course, it handles all all key events, not just run-app. One caveat, this only works on OS X and Linux with Festival right now. Patches for other operating systems and TTS systems are welcome at: http://github.com/digerata/grails-nadd-neutralizer.
 
 See: http://phatness.com/2010/02/decrease-latency-on-grails-builds/ for the reasoning and details behind implementation.
 
-(What is N.A.D.D? See: http://randsinrepose.com/archives/2003/07/10/nadd.html)
+(What is N.A.D.D? See Rands here: http://randsinrepose.com/archives/2003/07/10/nadd.html)
+
+---------------------------------------------------------------------------------
+
+Linux Installation
+==================
+
+First install the Festival TTS-engine with:
+
+	sudo apt-get install festival 
+
+By default Festival uses obsolete OSS-emulation (/dev/dsp) which happens to generate a “device is already busy” problem on some computers.
+
+The fix for that is to run the following command from your home-directory:
+
+	printf ";use ALSA\n(Parameter.set 'Audio_Method 'Audio_Command)\n(Parameter.set 'Audio_Command \"aplay -q -c 1 -t raw -f s16 -r \$SR \$FILE\")\n" > .festivalrc
+
+This will create a festival run commands file used by Festival to use the correct sound emulation driver.
