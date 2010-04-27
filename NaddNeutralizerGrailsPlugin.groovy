@@ -1,6 +1,6 @@
 class NaddNeutralizerGrailsPlugin {
     // the plugin version
-    def version = "0.2"
+    def version = "0.3"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.1 > *"
     // the other plugins this plugin depends on
@@ -27,7 +27,7 @@ This plugin helps spread the love.
 Source is at: http://github.com/digerata/grails-nadd-neutralizer
 
 Contributions are welcome.  Currently, this plugin only supports
-Mac OS X.
+Mac OS X and Linux with Festival TTS.
 '''
 
     // URL to the plugin's documentation
