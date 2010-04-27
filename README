@@ -24,3 +24,5 @@ The fix for that is to run the following command from your home-directory:
 	printf ";use ALSA\n(Parameter.set 'Audio_Method 'Audio_Command)\n(Parameter.set 'Audio_Command \"aplay -q -c 1 -t raw -f s16 -r \$SR \$FILE\")\n" > .festivalrc
 
 This will create a festival run commands file used by Festival to use the correct sound emulation driver.
+
+Finally, because not everyone on Linux will be able to use Festival, Add the environment variable: SPEECH_ENGINE=festival to your profile.  This will tell the plugin that Festival is available.
